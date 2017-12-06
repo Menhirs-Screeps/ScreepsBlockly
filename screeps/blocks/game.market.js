@@ -15,3 +15,7 @@ Blockly.Screeps.Game.Market.Toolbox =
 
 Blockly.Screeps.Game.Market.Hue = 100;
 Blockly.Screeps.Game.Market.HelpUrl = "http://docs.screeps.com/api/#Game.market";
+
+/**
+ * @todo complete implementation
+ */

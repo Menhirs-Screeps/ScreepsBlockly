@@ -16,11 +16,20 @@ Blockly.Screeps.Room.Toolbox =
 Blockly.Screeps.Room.Hue = 200;
 Blockly.Screeps.Room.HelpUrl = "http://docs.screeps.com/api/#Room";
 
+/**
+ * @todo implementation
+ */
+
 Blockly.Screeps.Room.Compatibility = [ "Room", "Object" ];
 
 Blockly.Blocks['room_find'] = {
     init: function() {
         this.appendValueInput("type")
+        .appendField(
+            new Blockly.FieldInstance('Lcd',
+                                      'MyLCD',
+                                      true, true, false),
+            'LCD_NAME')
             .appendField("Find")
             .setCheck("FindConstant")
             .setAlign(Blockly.ALIGN_RIGHT);

@@ -14,3 +14,7 @@ Blockly.Screeps.PathFinder.Toolbox =
 
 Blockly.Screeps.PathFinder.Hue = 120;
 Blockly.Screeps.PathFinder.HelpUrl = "http://docs.screeps.com/api/#PathFinder";
+
+/**
+ * @todo complete implementation
+ */

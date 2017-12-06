@@ -14,3 +14,7 @@ Blockly.Screeps.RawMemory.Toolbox =
 
 Blockly.Screeps.RawMemory.Hue = 130;
 Blockly.Screeps.RawMemory.HelpUrl = "http://docs.screeps.com/api/#RawMemory";
+
+/**
+ * @todo complete implementation
+ */

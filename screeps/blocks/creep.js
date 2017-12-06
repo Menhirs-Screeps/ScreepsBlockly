@@ -22,6 +22,10 @@ Blockly.Screeps.Creep.Toolbox =
 Blockly.Screeps.Creep.Hue = 150;
 Blockly.Screeps.Creep.HelpUrl = "http://docs.screeps.com/api/#Creep";
 
+/**
+ * @todo implementation
+ */
+
 Blockly.Screeps.Creep.Compatibility = [ "Creep", "Object" ];
 
 Blockly.Blocks['creep_pos'] = {

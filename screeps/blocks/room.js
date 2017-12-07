@@ -36,11 +36,13 @@ Blockly.Blocks['room_find'] = {
         this.appendValueInput("SELF")
             .appendField("in")
             .setCheck(Blockly.Screeps.Room.Compatibility)
-            .setAlign(Blockly.ALIGN_RIGHT);
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(new Blockly.FieldImage("/media/mandatory-disconnected.png", 15, 15, "md"));
         this.appendValueInput("OPTIONS")
             .appendField('options')
             .setCheck("FilterObject")
-            .setAlign(Blockly.ALIGN_RIGHT);
+            .setAlign(Blockly.ALIGN_RIGHT)
+            .appendField(new Blockly.FieldImage("/media/optional-disconnected.png", 15, 15, "od"));
         this.setOutput(true, "Object");
         this.setColour(Blockly.Screeps.Room.Hue);
         this.setTooltip("Find all objects of the specified type in the room.");

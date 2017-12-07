@@ -61,6 +61,11 @@ def index_redirect():
     """Redirect the server entry point to the front end."""
     redirect('/web/index.html')
 
+@app.route('/media/<file_path:path>')
+def static_media(file_path):
+    return static_file(file_path,
+                       root=os.path.join(document_root, 'web/media'))
+
 @app.route('/web/<file_path:path>')
 def static_web(file_path):
     """Serve the 'web' folder static files.

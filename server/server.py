@@ -76,6 +76,16 @@ def static_web(file_path):
     return static_file(file_path,
                        root=os.path.join(document_root, 'web'))
 
+@app.route('/closure-library/<file_path:path>')
+def static_closure(file_path):
+    """Serve the 'web' folder static files.
+
+    :param file_path: File path inside the 'web' folder.
+    :return: Full HTTPResponse for the static file.
+    """
+    return static_file(file_path,
+                       root=os.path.join(document_root, 'closure-library'))
+
 @app.route('/blockly/<file_path:path>')
 def static_blockly(file_path):
     """Serve the 'blockly' folder static files.

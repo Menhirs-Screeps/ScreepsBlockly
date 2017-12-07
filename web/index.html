@@ -15,9 +15,9 @@
   <script src="blockly/lua_compressed.js"></script>
   <script src="blockly/dart_compressed.js"></script>
   -->
-  <script src="screeps/instances.js"></script>
-  <script src="screeps/fieldinstance.js"></script>
-  <script src="screeps/blockly.js"></script>
+  <script src="screeps/blockly/core/instances.js"></script>
+  <script src="screeps/blockly/core/fieldinstance.js"></script>
+  <script src="screeps/blockly/blockly.js"></script>
   <script src="screeps/screeps.js"></script>
   <script src="screeps/blocks/helpers.js"></script>
   <script src="screeps/blocks/game.js"></script>
@@ -27,6 +27,7 @@
   <script src="screeps/blocks/pathfinder.js"></script>
   <script src="screeps/blocks/rawmemory.js"></script>
   <script src="screeps/blocks/constants.js"></script>
+  <script src="screeps/blocks/constructionsite.js"></script>
   <script src="screeps/blocks/creep.js"></script>
   <script src="screeps/blocks/room.js"></script>
   <script src="screeps/blocks/roomposition.js"></script>
@@ -39,6 +40,7 @@
   <script src="screeps/generators/javascript/pathfinder.js"></script>
   <script src="screeps/generators/javascript/rawmemory.js"></script>
   <script src="screeps/generators/javascript/constants.js"></script>
+  <script src="screeps/generators/javascript/constructionsite.js"></script>
   <script src="screeps/generators/javascript/creep.js"></script>
   <script src="screeps/generators/javascript/room.js"></script>
   <script src="screeps/generators/javascript/roomposition.js"></script>
@@ -61,6 +63,7 @@
         Blockly.Screeps.Constants.Toolbox +
     '  </category>' +
     '  <category name="Prototypes">' +
+        Blockly.Screeps.ConstructionSite.Toolbox +
         Blockly.Screeps.Creep.Toolbox +
         Blockly.Screeps.Room.Toolbox +
         Blockly.Screeps.RoomPosition.Toolbox +

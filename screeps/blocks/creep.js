@@ -19,7 +19,7 @@ Blockly.Screeps.Creep.Toolbox =
 '</category>'
 ;
 
-Blockly.Screeps.Creep.Hue = 150;
+Blockly.Screeps.Creep.Hue = 160;
 Blockly.Screeps.Creep.HelpUrl = "http://docs.screeps.com/api/#Creep";
 
 /**

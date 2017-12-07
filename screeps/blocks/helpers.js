@@ -16,10 +16,6 @@ Blockly.Screeps.Helpers.Toolbox =
 '    <block type="inlinefunction"></block>' +
 '    <block type="getinhash"></block>' +
 '  </category>' +
-'<block type="inst_creatable"></block>' +
-'<block type="inst_tff"></block>' +
-'<block type="inst_ftf"></block>' +
-'<block type="inst_fft"></block>' +
 '  <category name="Options">' +
 '    <block type="pathfindingalgorithm"></block>' +
 '    <block type="filterobject"></block>' +
@@ -47,67 +43,6 @@ Blockly.Blocks['getinhash'] = {
         this.setHelpUrl("");
     }
   };
-
-  Blockly.Blocks['inst_creatable'] = {
-    init: function() {
-        this.appendDummyInput("type")
-        .appendField("fff")
-            .appendField(
-                new Blockly.FieldInstance('Lcd',
-                                        'MyLCD',
-                                        false, false, false),
-                'LCD_NAME');
-        this.setOutput(false, null);
-        this.setColour(230);
-        this.setTooltip("");
-        this.setHelpUrl("");
-    }
-};
-Blockly.Blocks['inst_tff'] = {
-  init: function() {
-      this.appendDummyInput("type")
-      .appendField("tff")
-          .appendField(
-              new Blockly.FieldInstance('Lcd',
-                                      'MyLCD',
-                                      true, false, false),
-              'LCD_NAME');
-      this.setOutput(false, null);
-      this.setColour(230);
-      this.setTooltip("");
-      this.setHelpUrl("");
-  }
-};
-Blockly.Blocks['inst_ftf'] = {
-  init: function() {
-      this.appendDummyInput("type")
-      .appendField("ftf")
-          .appendField(
-              new Blockly.FieldInstance('Lcd',
-                                      'MyLCD',
-                                      false, true, false),
-              'LCD_NAME');
-      this.setOutput(false, null);
-      this.setColour(230);
-      this.setTooltip("");
-      this.setHelpUrl("");
-  }
-};
-Blockly.Blocks['inst_fft'] = {
-  init: function() {
-      this.appendDummyInput("type")
-            .appendField("fft")
-          .appendField(
-              new Blockly.FieldInstance('Lcd',
-                                      'MyLCD',
-                                      false, false, true),
-              'LCD_NAME');
-      this.setOutput(false, null);
-      this.setColour(230);
-      this.setTooltip("");
-      this.setHelpUrl("");
-  }
-};
 
 Blockly.Blocks['module'] = {
     init: function() {

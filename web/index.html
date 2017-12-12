@@ -4,21 +4,24 @@
   <meta charset="utf-8">
   <meta name="google" value="notranslate">
   <title>Blockly Demo:</title>
+  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/columns.css">
   <link rel="stylesheet" href="style.css">
+  
+  <script src="js/fullscreen.js"></script>
+  
   <!-- <script src="/storage.js"></script> -->
   <script src="/blockly/blockly_compressed.js"></script>
   <script src="/blockly/blocks_compressed.js"></script>
   <script src="/blockly/javascript_compressed.js"></script>
-  <!--
-  <script src="/blockly/python_compressed.js"></script>
-  <script src="/blockly/php_compressed.js"></script>
-  <script src="/blockly/lua_compressed.js"></script>
-  <script src="/blockly/dart_compressed.js"></script>
-  -->
+
   <script src="/screeps/blockly/core/instances.js"></script>
   <script src="/screeps/blockly/core/fieldinstance.js"></script>
   <script src="/screeps/blockly/blockly.js"></script>
+
   <script src="/screeps/screeps.js"></script>
+  
   <script src="/screeps/blocks/helpers.js"></script>
   <script src="/screeps/blocks/game.js"></script>
   <script src="/screeps/blocks/game.map.js"></script>
@@ -44,8 +47,6 @@
   <script src="/screeps/generators/javascript/creep.js"></script>
   <script src="/screeps/generators/javascript/room.js"></script>
   <script src="/screeps/generators/javascript/roomposition.js"></script>
-
-  <script src="code.js"></script>
 </head>
 <body>
   <script>
@@ -70,48 +71,72 @@
     '  </category>' +
     '</xml>';
   </script>
-  <table width="100%" height="100%">
-    <tr>
-      <td>
-        <h1>
-          <span id="title">...</span>
-        </h1>
-      </td>
-      <td class="farSide">
-        <select id="languageMenu"></select>
-      </td>
-    </tr>
-    <tr>
+  <div id="wrapper">
+    <header>
+      <table width="100%" height="100%">
+        <tr>
+          <td>
+            <h1>
+              <button onclick="switchFullscreen ()">Fullscreen</button>
+              <span id="title">...</span>
+            </h1>
+          </td>
+          <td class="farSide">
+            <select id="languageMenu"></select>
+          </td>
+        </tr>
+      </table>
+    </header>
+
+    <div id="viewing">
+      <div id="gameView">
+      </div>
+    </div>
+    <div id="coding">
+      <table width="100%" height="100%">
+      <tr style="">
       <td colspan=2>
-        <table width="100%">
-          <tr id="tabRow" height="1em">
-            <td id="tab_blocks" class="tabon">...</td>
-            <td class="tabmin">&nbsp;</td>
-            <td id="tab_javascript" class="taboff">JavaScript</td>
-            <td class="tabmin">&nbsp;</td>
-            <td id="tab_xml" class="taboff">XML</td>
-            <td class="tabmax">
-              <button id="trashButton" class="notext" title="...">
-                <img src='/blockly/media/1x1.gif' class="trash icon21">
-              </button>
-              <button id="linkButton" class="notext" title="...">
-                <img src='/blockly/media/1x1.gif' class="link icon21">
-              </button>
-              <button id="runButton" class="notext primary" title="...">
-                <img src='/blockly/media/1x1.gif' class="run icon21">
-              </button>
-            </td>
-          </tr>
-        </table>
+      <table width="100%">
+      <tr id="tabRow" height="1em">
+      <td id="tab_blocks" class="tabon">...</td>
+      <td class="tabmin">&nbsp;</td>
+      <td id="tab_javascript" class="taboff">JavaScript</td>
+      <td class="tabmin">&nbsp;</td>
+      <td id="tab_xml" class="taboff">XML</td>
+      <td class="tabmin">&nbsp;</td>
+      <td id="tab_screeps" class="taboff">Screeps</td>
+      <td class="tabmax">
+      <button id="trashButton" class="notext" title="...">
+      <img src='/blockly/media/1x1.gif' class="trash icon21">
+      </button>
+      <button id="linkButton" class="notext" title="...">
+      <img src='/blockly/media/1x1.gif' class="link icon21">
+      </button>
+      <button id="runButton" class="notext primary" title="...">
+      <img src='/blockly/media/1x1.gif' class="run icon21">
+      </button>
       </td>
-    </tr>
-    <tr>
+      </tr>
+      </table>
+      </td>
+      </tr>
+      <tr>
       <td height="99%" colspan=2 id="content_area">
       </td>
-    </tr>
-  </table>
-  <div id="content_blocks" class="content"></div>
-  <pre id="content_javascript" class="content"></pre>
-  <textarea id="content_xml" class="content" wrap="off"></textarea>
-</body>
+      </tr>
+      </table>
+      <div id="content_blocks" class="content"></div>
+        <pre id="content_javascript" class="content" style=""></pre>
+        <textarea id="content_xml" class="content" wrap="off" style=""></textarea>
+        <div id="content_screeps" class="content">
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p><a href="http://www.everythingaboutweb.com">everything about web</a> &copy; 2012</p>
+    </footer>
+  </div>
+  <script src="code.js"></script>
+  <script src="game.js"></script>
+  </body>
 </html>

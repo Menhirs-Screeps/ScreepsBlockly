@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#wrapper {
+width: 100%;
+background-color: #FFF;
+margin-left:auto;
+margin-right:auto;
+}
+
+header {
+    height: 50px;
+}
+
+#coding {
+    width: auto;
+    margin-left: 420px;
+    margin-right: 10px;
+    height: calc(100vh - 70px);
+}
+
+#viewing {
+    float: left;
+    width: 410px;
+    margin-left: 10px;
+    height: calc(100vh - 70px);
+}
+
+footer {
+    clear:both;
+    height: 20px;
+}

@@ -213,6 +213,10 @@ Code.importPrettify = function() {
  * @private
  */
 Code.getBBox_ = function(element) {
+  console.log (element.offsetHeight);
+  console.log (element.parentElement.offsetHeight);
+  console.log (element.parentElement.parentElement.offsetHeight);
+  console.log (element.parentElement.parentElement.parentElement.offsetHeight);
   var height = element.offsetHeight;
   var width = element.offsetWidth;
   var x = 0;
@@ -240,7 +244,7 @@ Code.LANG = Code.getLang();
  * List of tab names.
  * @private
  */
-Code.TABS_ = ['blocks', 'javascript', 'xml'];//, 'php', 'python', 'dart', 'lua', 'xml'];
+Code.TABS_ = ['blocks', 'javascript', 'xml', 'screeps'];//, 'php', 'python', 'dart', 'lua', 'xml'];
 
 Code.selected = 'blocks';
 
@@ -299,7 +303,11 @@ Code.tabClick = function(clickedName) {
 Code.renderContent = function() {
   var content = document.getElementById('content_' + Code.selected);
   // Initialize the pane.
-  if (content.id == 'content_xml') {
+  
+  if (content.id == 'content_screeps') {
+    var xmlTextarea = document.getElementById('content_screeps');
+    xmlTextarea.focus();
+  } else if (content.id == 'content_xml') {
     var xmlTextarea = document.getElementById('content_xml');
     var xmlDom = Blockly.Xml.workspaceToDom(Code.workspace);
     var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
@@ -358,6 +366,7 @@ Code.init = function() {
   var container = document.getElementById('content_area');
   var onresize = function(e) {
     var bBox = Code.getBBox_(container);
+    console.log ( bBox);
     for (var i = 0; i < Code.TABS_.length; i++) {
       var el = document.getElementById('content_' + Code.TABS_[i]);
       el.style.top = bBox.y + 'px';
@@ -407,6 +416,8 @@ Code.init = function() {
        media: '/blockly/media/',
        rtl: rtl,
        toolbox: toolboxXml,
+       horizontalLayout : true, 
+       toolboxPosition : 'start', 
        zoom:
            {controls: true,
             wheel: true}

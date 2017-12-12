@@ -1,3 +1,9 @@
+
+'use strict';
+
+goog.require('Blockly.BlockSvg');
+goog.require('Blockly');
+
 var Toolbox_blockly =
     '  <category name="Logic" colour="#5C81A6">' +
     '    <block type="controls_if"></block>' +

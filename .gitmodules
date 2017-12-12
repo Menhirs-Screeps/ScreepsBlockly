@@ -7,3 +7,6 @@
 [submodule "closure-library"]
 	path = closure-library
 	url = https://github.com/Menhirs-Screeps/closure-library.git
+[submodule "waitress"]
+	path = waitress
+	url = https://github.com/Menhirs-Screeps/waitress.git

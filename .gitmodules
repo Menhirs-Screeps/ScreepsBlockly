@@ -1,11 +1,11 @@
 [submodule "blockly"]
-	path = blockly
+	path = submodules/blockly
 	url = https://github.com/Menhirs-Screeps/blockly.git
 [submodule "server/local-packages/waitress"]
 	path = server/local-packages/waitress
 	url = https://github.com/Menhirs-Screeps/waitress.git
 [submodule "closure-library"]
-	path = closure-library
+	path = submodules/closure-library
 	url = https://github.com/Menhirs-Screeps/closure-library.git
 [submodule "waitress"]
 	path = submodules/waitress

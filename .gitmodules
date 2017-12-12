@@ -10,3 +10,6 @@
 [submodule "waitress"]
 	path = submodules/waitress
 	url = https://github.com/Menhirs-Screeps/waitress.git
+[submodule "submodules/ace"]
+	path = submodules/ace
+	url = https://github.com/Menhirs-Screeps/ace.git

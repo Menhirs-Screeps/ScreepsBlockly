@@ -84,7 +84,7 @@ def static_closure(file_path):
     :return: Full HTTPResponse for the static file.
     """
     return static_file(file_path,
-                       root=os.path.join(document_root, 'closure-library'))
+                       root=os.path.join(document_root, 'submodules/closure-library'))
 
 @app.route('/blockly/<file_path:path>')
 def static_blockly(file_path):
@@ -93,7 +93,16 @@ def static_blockly(file_path):
     :param file_path: File path inside the 'blockly' folder.
     :return: Full HTTPResponse for the static file.
     """
-    return static_file(file_path, root=os.path.join(document_root, 'blockly'))
+    return static_file(file_path, root=os.path.join(document_root, 'submodules/blockly'))
+
+@app.route('/ace/<file_path:path>')
+def static_blockly(file_path):
+    """Serve the 'ace' folder static files.
+
+    :param file_path: File path inside the 'ace' folder.
+    :return: Full HTTPResponse for the static file.
+    """
+    return static_file(file_path, root=os.path.join(document_root, 'submodules/ace'))
 
 @app.route('/screeps/<file_path:path>')
 def static_blockly(file_path):
